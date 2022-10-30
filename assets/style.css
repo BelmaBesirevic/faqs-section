@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFCDB2;
+}
+
+.accordion-section {
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.accordion-section h1 {
+  text-align: center;
+  color: #FF0F80;
+}
+
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 95%);
+  padding: 0px 4rem;
+  transition: all 0.4s ease;
+  border-bottom: 1px solid #FF0F80;
+}
+
+.active,
+.accordion:hover {
+  background-color: hsl(0, 0%, 88%);
+}
+
+.accordion::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\2b";
+  color: #FF0F80;
+}
+
+.active::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f068";
+  color: #FF0F80;
+}
+
+.accordion p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.desc {
+  padding: 0 1rem;
+  background-color: #fff;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
